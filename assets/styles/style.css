@@ -1,17 +1,158 @@
-.container {
-  max-width: 1400px;
-  margin: 0 auto;
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'poppins', sans-serif;
+  background-color: rgb(0, 36, 39);
 }
-.flex {
+
+body{
+  color: #fff;
+}
+
+.header
+{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 10%;
+  background: transparent;
   display: flex;
-}
-.justify-between {
   justify-content: space-between;
+  align-items: center;
+  z-index: 100;
 }
-nav {
-  margin-right: 20px;
-}
-a {
+
+.logo{
+  position: relative;
+  font-size: 25px;
+  color: #fff;
   text-decoration: none;
-  color: black;
+  font-weight: 600;
+  animation: slideRight .5s ease forwards;
+}
+.navbar a {
+  display: inline-block;
+  font-size: 25px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 35px;
+  transition: .3s;
+  opacity: 0; 
+  animation: slideTop .5s ease forwards;
+}
+
+.navbar a:hover{
+  color: #0ef;
+}
+
+.home{
+  position: relative;
+  width: 100%;
+  justify-content: space-between;
+  height: 100vh;
+  background: url(/assets/images/RobinJames.jpg) no-repeat;
+  background-size: 350px 512px;
+  background-position:  right 25% bottom 45%;;
+  display: flex;
+  align-items: center;
+  padding: 70px 10% 0;
+}
+
+.home-content{
+  max-width: 600px;
+}
+
+.home-content h3{
+  font-size: 32px;
+  font-weight: 700;
+  animation: slideRight 1s ease forwards;
+  animation-delay: .2s;
+}
+
+.home-content h3 span{
+  color:aquamarine;
+}
+
+.home-content h3:nth-of-type(2){
+  margin-bottom: 30px;
+}
+
+.home-content h1{
+  font-size: 56px;
+  font-weight: 700;
+  margin: -3px 0;
+  animation: slideTop .5s ease forwards;
+}
+
+.home-content p {
+  font-size: 20px;
+}
+
+.home-sci a{
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  background: transparent;
+  border: 2px solid rgb(255, 0, 149);
+  border-radius: 50%;
+  font-size: 20px;
+  color: rgb(255, 0, 149);
+  text-decoration: none;
+  margin: 20px 40px 20px 0;
+}
+
+.home-sci a:hover {
+  background: rgb(255, 0, 149);
+  color: #081b29;
+  box-shadow: 0 0 20px rgb(255, 0, 149)f;
+}
+
+@keyframes slideRight{
+  0%  {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100%  {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes slideTop{
+  0%  {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  100%  {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes slideBottom{
+  0%  {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  100%  {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes slideLeft{
+  0%  {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  100%  {
+    transform: translateX (0px);
+    opacity: 1;
+  }
 }
